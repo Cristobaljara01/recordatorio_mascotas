@@ -59,7 +59,7 @@ $especies_result = $conexion->query("SELECT DISTINCT especie FROM mascotas ORDER
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f8fafc;
+            background:rgb(135, 211, 230);
             color: #1e293b;
             line-height: 1.6;
         }
@@ -92,8 +92,8 @@ $especies_result = $conexion->query("SELECT DISTINCT especie FROM mascotas ORDER
             border-radius: 16px;
             padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(221, 50, 184, 0.1);
+            border: 1px solidrgb(216, 93, 216);
         }
 
         .search-form {
@@ -119,11 +119,11 @@ $especies_result = $conexion->query("SELECT DISTINCT especie FROM mascotas ORDER
         .search-input, .search-select {
             width: 100%;
             padding: 0.75rem 1rem;
-            border: 2px solid #e5e7eb;
+            border: 2px solidrgb(235, 229, 235);
             border-radius: 8px;
             font-size: 1rem;
             transition: all 0.2s ease;
-            background: #fafafa;
+            background:rgb(255, 255, 255);
         }
 
         .search-input:focus, .search-select:focus {
@@ -504,7 +504,7 @@ $especies_result = $conexion->query("SELECT DISTINCT especie FROM mascotas ORDER
                         
                         <?php
                         $mascota_id = intval($mascota['id']);
-                        $sql= "SELECT * FROM agregar_vacuna WHERE id = $mascota_id ORDER BY fecha_aplicacion DESC";
+                        $sql= "SELECT * FROM agregar_vacuna WHERE mascota_id = $mascota_id ORDER BY fecha_aplicacion DESC";
       
                         $vacunas = $conexion->query($sql);
                         
